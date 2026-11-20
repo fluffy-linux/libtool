@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/sw/bash/bin/bash
 
 # libtool (GNU @PACKAGE@) @VERSION@
 # Provide generalized library-building support services.

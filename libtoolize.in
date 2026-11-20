@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/sw/bash/bin/bash
 
 # Prepare a package to use libtool.
 # Written by Gary V. Vaughan <gary@gnu.org>, 2003
