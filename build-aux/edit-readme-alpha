@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/sw/bash/bin/bash
 
 #   edit-readme-alpha - edit README file for alpha releases
 #   Copyright (C) 2010-2015 Free Software Foundation, Inc.
