@@ -100,7 +100,7 @@ main (void)
 ]])
 
 cat > missing <<_EOF
-#! /bin/sh
+#!/sw/bash/bin/bash
 exit 0
 _EOF
 chmod a+x missing
@@ -207,7 +207,7 @@ main (int argc, char *argv[])
 ]])
 
 cat > missing <<_EOF
-#! /bin/sh
+#!/sw/bash/bin/bash
 exit 0
 _EOF
 chmod a+x missing

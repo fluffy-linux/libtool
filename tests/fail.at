@@ -35,7 +35,7 @@ m4_pushdef([FAIL_CHECK],
 ])
 
 AT_DATA([script],
-[[#! /bin/sh
+[[#!/sw/bash/bin/bash
 exit 0
 ]])
 chmod +x script

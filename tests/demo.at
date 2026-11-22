@@ -123,7 +123,7 @@ else
 bin_SCRIPTS = helldl
 helldl helldl$(EXEEXT):
 	rm -rf $@
-	echo '#! /bin/sh' > $@
+	echo '#!/sw/bash/bin/bash' > $@
 	echo 'echo sorry, -dlopen is unsupported' >> $@
 	chmod +x $@
 
@@ -853,7 +853,7 @@ else
 bin_SCRIPTS = helldl
 helldl helldl$(EXEEXT):
 	rm -rf $@
-	echo '#! /bin/sh' > $@
+	echo '#!/sw/bash/bin/bash' > $@
 	echo 'echo sorry, -dlopen is unsupported' >> $@
 	chmod +x $@
 
