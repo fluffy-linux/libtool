@@ -1078,7 +1078,7 @@ libtoolize: linking file 'ltdl/slist.c'
 ]])
 
 AT_DATA([no-m4],
-[[#! /bin/sh
+[[#!/sw/bash/bin/bash
 echo 'error: do not call m4' >&2
 exit 1
 ]])

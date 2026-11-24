@@ -360,7 +360,7 @@ AT_CLEANUP
 AT_SETUP([ccache -all-static])
 
 AT_DATA([ccache],
-[[#! /bin/sh
+[[#!/sw/bash/bin/bash
 # poor man's ccache clone
 case $1 in
 -*) echo "bogus argument: $1" >&2; exit 1 ;;
