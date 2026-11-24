@@ -1076,7 +1076,7 @@ lt_name=`$ECHO "$LIBTOOLIZE" | $SED "s|^.*/||"`
 $SED -i "s/libtoolize/$lt_name/g" expout
 
 AT_DATA([no-m4],
-[[#! /bin/sh
+[[#!/sw/bash/bin/bash
 echo 'error: do not call m4' >&2
 exit 1
 ]])

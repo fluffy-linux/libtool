@@ -98,7 +98,7 @@ main (void)
 ]])
 
 cat > missing <<_EOF
-#! /bin/sh
+#!/sw/bash/bin/bash
 exit 0
 _EOF
 chmod a+x missing
@@ -205,7 +205,7 @@ main (int argc, char *argv[])
 ]])
 
 cat > missing <<_EOF
-#! /bin/sh
+#!/sw/bash/bin/bash
 exit 0
 _EOF
 chmod a+x missing
@@ -223,5 +223,39 @@ AT_CHECK([$GREP 'This is not GNU Hello.' stdout], [], [ignore])
 # Make sure config.status --recheck updates the libtool script
 rm libtool
 AT_CHECK([$SHELL ./config.status --recheck],[0],[ignore],[ignore])
+
+AT_CLEANUP
+
+
+## ----------------------------------------------------- ##
+## Without CONFIG_SHELL, SHELL names /sw/bash/bin/bash.  ##
+## ----------------------------------------------------- ##
+
+AT_SETUP([SHELL without CONFIG_SHELL])
+
+AT_DATA([configure.ac],
+[[AC_INIT([libtool-demo], ]]AT_PACKAGE_VERSION[[, ]]AT_PACKAGE_BUGREPORT[[)
+AC_CONFIG_MACRO_DIRS([m4])
+LT_INIT
+AC_CONFIG_FILES([shell.txt])
+AC_OUTPUT
+]])
+
+AT_DATA([shell.txt.in],
+[[@SHELL@
+]])
+
+LT_AT_LIBTOOLIZE([--copy --install])
+LT_AT_ACLOCAL([-I m4])
+LT_AT_AUTOCONF([--force])
+
+# configure falls back to LT_INIT's default shell when CONFIG_SHELL is
+# unset, and runs config.status with it: Fluffy has no /bin/sh.
+AT_CHECK([$as_unset CONFIG_SHELL; /sw/bash/bin/bash ./configure $configure_options],
+	 [0], [ignore], [ignore])
+AT_CHECK([cat shell.txt], [0], [[/sw/bash/bin/bash
+]])
+AT_CHECK([sed 1q libtool], [0], [[#! /sw/bash/bin/bash
+]])
 
 AT_CLEANUP

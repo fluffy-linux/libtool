@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/sw/bash/bin/bash
 
 #   no-bogus-m4-defines - detect wrong m4 definitions
 #   -------------------------------------------------

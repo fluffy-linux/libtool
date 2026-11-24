@@ -26,7 +26,7 @@ _lt_bin=$abs_top_builddir/libtool
 re_begincf='^# ### BEGIN FUNCTIONS SHARED WITH CONFIGURE'
 re_endcf='^# ### END FUNCTIONS SHARED WITH CONFIGURE'
 
-$ECHO '#!/bin/sh'       > "$1"
+$ECHO '#!/sw/bash/bin/bash'       > "$1"
 $ECHO '#: ${SED=sed}'   >> "$1"
 $ECHO '#: ${ECHO=echo}' >> "$1"
 
