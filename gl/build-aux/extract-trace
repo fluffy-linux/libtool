@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/sw/bash/bin/bash
 
 # Extract macro arguments from autotools input with GNU M4.
 # Written by Gary V. Vaughan, 2010

@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/sw/bash/bin/bash
 
 # Set a version string for this script.
 scriptversion=2014-01-07.03; # UTC

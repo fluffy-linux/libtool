@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/sw/bash/bin/bash
 
 # Bootstrap an Autotooled package from checked-out sources.
 # Written by Gary V. Vaughan, 2010

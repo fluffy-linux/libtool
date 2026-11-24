@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/sw/bash/bin/bash
 
 # Output the contents of a shell script with sourced files inlined.
 # Written by Gary V. Vaughan, 2012
