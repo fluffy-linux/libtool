@@ -3,4 +3,4 @@
 	url = ../gnulib.git
 [submodule "bootstrap"]
         path = gl-mod/bootstrap
-        url = https://github.com/gnulib-modules/bootstrap.git
+	url = ../bootstrap.git
