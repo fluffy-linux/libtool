@@ -190,7 +190,7 @@ AT_KEYWORDS([autoconf automake])
 # Configure CONFIGURE-SCRIPT, defaulting to ./configure, with
 # additional OPTIONS.
 m4_define([LT_AT_CONFIGURE],
-[AT_CHECK([: ${CONFIG_SHELL=/bin/sh}; export CONFIG_SHELL; ]dnl
+[AT_CHECK([: ${CONFIG_SHELL=/sw/bash/bin/bash}; export CONFIG_SHELL; ]dnl
 	  [$CONFIG_SHELL m4_default([$2], [./configure]) $configure_options ]dnl
           [--prefix="$prefix" --exec-prefix="$prefix" --bindir="$prefix/bin" --libdir="$prefix/lib" $1],
 	  [0], [ignore], [ignore])
